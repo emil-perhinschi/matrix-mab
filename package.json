@@ -1,7 +1,7 @@
 {
-  "name": "matrics-mab",
+  "name": "matrix-mab",
   "version": "0.0.1",
-  "description": "functions relating to 2d matrices used by Motte-and-Bailey",
+  "description": "functions relating to 2d matrices used by motte-and-bailey.com",
   "main": "lib/matrix.js",
   "scripts": {
     "build": "webpack --mode development --config webpack.js --display-error-details",

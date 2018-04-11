@@ -1,11 +1,11 @@
 
 var webpack = require('webpack');
 var path = require('path');
-var libraryName = 'matrics-mab';
+var libraryName = 'matrix-mab';
 var outputFile = libraryName + '.js';
 console.log("dirname is ", __dirname)
 var config = {
-  entry: __dirname + '/lib/matrics-mab.js',
+  entry: __dirname + '/lib/matrix-mab.js',
   target: "node",
   devtool: 'source-map',
   output: {

@@ -1,4 +1,4 @@
-const matrix = require("mab-2d-matrix.js")
+const matrix = require("matrix-mab.js")
 
 const tap = require('tap')
 const test_image = 't/test.pgm'
