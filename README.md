@@ -1,6 +1,6 @@
 # README
 
-functions manipulating 2d matrices used by motte-and-bailey.com
+functions manipulating 2d matrices I use to generate random maps
 
 function names might sometimes seem wonky because I don't want to create
 confusions with legitimate mathematical terms
@@ -8,7 +8,7 @@ confusions with legitimate mathematical terms
 this library is in a very early stage and the API will change without warning
 until version 1.0 is released
 
-the code should hopefully conform to ES6 standards
+the code should hopefully conform to ES6 specs; if it does not then it's a bug
 
 ## EXAMPLES
 look under t/ for examples about how to use it
@@ -92,6 +92,9 @@ in
 
 out
     * new 2d array
+
+### squeeze TODO
+downscale 2d arrays
 
 ### enlarge TODO
 similar with scaling using nearest neighbor interpolation but hopefully simpler
