@@ -9,7 +9,7 @@
     "test": "npm run build && NODE_PATH=./dist tap t/*.js"
   },
   "author": "Emil Nicolaie Perhinschi",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "eslint": "^4.18.1",
     "pngjs": "^3.3.2",
