@@ -1,8 +1,8 @@
 {
   "name": "matrix-mab",
-  "version": "0.2",
+  "version": "0.2.1",
   "description": "functions relating to 2d matrices used by motte-and-bailey.com",
-  "main": "lib/matrix.js",
+  "main": "dist/matrix-mab.js",
   "scripts": {
     "build": "webpack --mode development --config webpack.js --display-error-details",
     "lint": "./node_modules/.bin/eslint  lib/*.js t/*.js ",
@@ -17,5 +17,9 @@
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository" : {
+      "type" : "git",
+      "url" : "https://bitbucket.org/emilper/matrix-mab"
+  }
 }
