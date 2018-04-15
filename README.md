@@ -22,31 +22,34 @@ npm run test (also runs build)
 
 ### pgm_to_matrix
 in
-    * image_data: content of a ascii PGM file
+  * image_data: content of a ascii PGM file
+
 out
-    * new 2D array
+  * new 2D array
 
 ### normalize_int
 see formula http://mathforum.org/library/drmath/view/60433.html ; Math.floor is applied to the result of that formula
 
 in (all integers)
-    * item
-    * actual_min_value
-    * actual_max_value
-    * normal_min
-    * normal_max
+  * item
+  * actual_min_value
+  * actual_max_value
+  * normal_min
+  * normal_max
+
 out
-    * integer
+  * integer
 
 ### slice2d
 in
-    * original
-    * start_x
-    * end_x
-    * start_y
-    * end_y
+  * original
+  * start_x
+  * end_x
+  * start_y
+  * end_y
+
 out
-    * new 2d array
+  * new 2d array
 
 ### random_matrix
 returns a 2d array of the specified size with random numbers between
@@ -54,12 +57,12 @@ returns a 2d array of the specified size with random numbers between
 and the result used in the cell
 
 in
-    * x : integer
-    * y : integer
-    * callback = (x) => x)
+  * x : integer
+  * y : integer
+  * callback = (x) => x)
 
 out
-    * new 2d array
+  * new 2d array
 
 ### resize
 creates a new 2d array with adds extra values (as returned by the fill()
@@ -68,17 +71,19 @@ allow_cropping permits allows the new size to be smaller than the original or
 the offset values to be negative so only part of the original 2d array values
 are preserved in the result
 
-in
-    * original : 2d array
-    * offset : object, such as { x: someValue, y: someOtherValue}
-    * new_size : object, such ash { x: 10, y:10 }
-    * fill : fill(x, y)
-    * allow_cropping: boolean
-
-out
-    * new 2d array
 fill(x,y) is function expecting the coordinates of the element and returning
 a value to be set to each element not existing already in the original
+
+
+in
+  * original : 2d array
+  * offset : object, such as { x: someValue, y: someOtherValue}
+  * new_size : object, such ash { x: 10, y:10 }
+  * fill : fill(x, y)
+  * allow_cropping: boolean
+
+out
+  * new 2d array
 
 ### stretch
 similar with scaling using bilinear interpolation, but simpler; values on the
@@ -86,12 +91,12 @@ edges are kept on the edges; not using "scale" in the name so it will not create
 the wrong expectations
 
 in
-    * orig : 2d array of integers
-    * new_width : int
-    * new_height : int
+  * orig : 2d array of integers
+  * new_width : int
+  * new_height : int
 
 out
-    * new 2d array
+  * new 2d array
 
 ### squeeze TODO
 downscale 2d arrays
@@ -100,11 +105,12 @@ downscale 2d arrays
 similar with scaling using nearest neighbor interpolation but hopefully simpler
 
 in
-    * orig: 2d array of integers
-    * new_width
-    * new_height
+  * orig: 2d array of integers
+  * new_width
+  * new_height
+
 out
-    * new 2d array
+  * new 2d array
 
 ### bundle TODO
 creates a new 2D array from a bunch of smaller 2d arrays by placing them one
@@ -125,8 +131,8 @@ to compute new values for the final result
 none
 
 ### Development
-    * eslint
-    * tap
-    * webpack
-    * webpack-cli
-    * pngjs
+  * eslint
+  * tap
+  * webpack
+  * webpack-cli
+  * pngjs
