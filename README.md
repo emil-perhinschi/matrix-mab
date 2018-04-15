@@ -22,15 +22,18 @@ npm run test (also runs build)
 
 ### pgm_to_matrix
 in
+
   * image_data: content of a ascii PGM file
 
 out
+
   * new 2D array
 
 ### normalize_int
 see formula http://mathforum.org/library/drmath/view/60433.html ; Math.floor is applied to the result of that formula
 
 in (all integers)
+
   * item
   * actual_min_value
   * actual_max_value
@@ -38,10 +41,12 @@ in (all integers)
   * normal_max
 
 out
+
   * integer
 
 ### slice2d
 in
+
   * original
   * start_x
   * end_x
@@ -49,6 +54,7 @@ in
   * end_y
 
 out
+
   * new 2d array
 
 ### random_matrix
@@ -57,11 +63,13 @@ returns a 2d array of the specified size with random numbers between
 and the result used in the cell
 
 in
+
   * x : integer
   * y : integer
   * callback = (x) => x)
 
 out
+
   * new 2d array
 
 ### resize
@@ -76,6 +84,7 @@ a value to be set to each element not existing already in the original
 
 
 in
+
   * original : 2d array
   * offset : object, such as { x: someValue, y: someOtherValue}
   * new_size : object, such ash { x: 10, y:10 }
@@ -83,6 +92,7 @@ in
   * allow_cropping: boolean
 
 out
+
   * new 2d array
 
 ### stretch
@@ -91,11 +101,13 @@ edges are kept on the edges; not using "scale" in the name so it will not create
 the wrong expectations
 
 in
+
   * orig : 2d array of integers
   * new_width : int
   * new_height : int
 
 out
+
   * new 2d array
 
 ### squeeze TODO
@@ -105,11 +117,13 @@ downscale 2d arrays
 similar with scaling using nearest neighbor interpolation but hopefully simpler
 
 in
+
   * orig: 2d array of integers
   * new_width
   * new_height
 
 out
+
   * new 2d array
 
 ### bundle TODO
@@ -131,6 +145,7 @@ to compute new values for the final result
 none
 
 ### Development
+
   * eslint
   * tap
   * webpack
