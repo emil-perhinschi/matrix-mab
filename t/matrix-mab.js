@@ -1,12 +1,12 @@
 const matrix = require("matrix-mab.js")
-const fs = require('fs');
-const tap = require('tap')
+const fs = require("fs")
+const tap = require("tap")
 
-const test_image = 't/test.pgm'
+const test_image = "t/test.pgm"
 
 const image_data = fs.readFileSync(
     test_image,
-    'ascii'
+    "ascii"
 )
 
 const result = matrix.pgm_to_matrix(image_data)
@@ -31,18 +31,18 @@ const resized = matrix.resize(
     random_matrix,
     { x: 2, y: 2},
     { x: 10, y: 10},
-    (x,y) => '',
+    () => "", // (x, y) => (x+y)/2
     false // allow cropping
 )
-tap.equals(resized.length, 10, 'resized height is right')
-tap.equals(resized[0].length, 10, 'resized width is right')
+tap.equals(resized.length, 10, "resized height is right")
+tap.equals(resized[0].length, 10, "resized width is right")
 
 const cropped = matrix.resize(
     random_matrix,
     { x: -1, y: -1},
     { x: 10, y: 10},
-    (x,y) => '',
+    () => "",
     true // allow cropping
 )
-tap.equals(cropped.length, 10, 'cropped height is right')
-tap.equals(cropped[0].length, 10, 'cropped width is right')
+tap.equals(cropped.length, 10, "cropped height is right")
+tap.equals(cropped[0].length, 10, "cropped width is right")
