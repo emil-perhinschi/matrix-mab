@@ -29,6 +29,46 @@ out
 
   * new 2D array
 
+### normalize_matrix
+by default it will adjust the values to a scale between 0 and 16, but you
+can provide other normal_min and normal_max values, and you can provide a
+function; the default uses normalize_int below
+
+in
+
+  * 2d array
+  * normal_min // default 0
+  * normal_max // default 16
+  * normalize_function // this should be a callback
+
+out
+
+  * new 2d array
+
+### get_min_and_max_values
+returns the min and the max values in the matrix as an object, such as { min: 0, max: 255 }
+
+in
+
+  * 2d array
+
+out
+
+  * object, ex. { min: 1, max: 33 }
+
+### normalize_array
+elements are parseInt-ed before being changed; the result contains only integers
+
+in
+
+  * 1d array
+  * normal_min
+  * normal_max
+
+out
+
+  * 1d array
+
 ### normalize_int
 see formula http://mathforum.org/library/drmath/view/60433.html ; Math.floor is applied to the result of that formula
 

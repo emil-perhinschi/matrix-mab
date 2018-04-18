@@ -12,10 +12,12 @@ const image_data = fs.readFileSync(
 const result = matrix.pgm_to_matrix(image_data)
 tap.equals(result.length, 50, "height is correct")
 tap.equals(result[0].length, 50, "width is correct")
-tap.equals(result[0][0], 16, "0,0 is 16")
-tap.equals(result[25][25], 0, "25,25 is 0")
 
-const part = matrix.slice2d(result, 17, 33, 17, 33)
+const normalized = matrix.normalize_matrix(result, 0, 16)
+tap.equals(normalized[0][0], 16, "0,0 is 16")
+tap.equals(normalized[25][25], 0, "25,25 is 0")
+
+const part = matrix.slice2d(normalized, 17, 33, 17, 33)
 tap.equals(part.length, 16, "slice is 20 high")
 tap.equals(part[0].length, 16, "slice is 20 wide")
 tap.equals(part[0][0], 16, "0,0 is 16")
@@ -46,3 +48,20 @@ const cropped = matrix.resize(
 )
 tap.equals(cropped.length, 10, "cropped height is right")
 tap.equals(cropped[0].length, 10, "cropped width is right")
+
+
+const test_min_max = [
+    [-1, 0, 1, 100],
+    [-25, 0, 25, 1000]
+]
+
+const { min, max } = matrix.get_min_and_max_values(test_min_max)
+tap.equals(min,  -25, "min is correct")
+tap.equals(max, 1000, "max is correct")
+
+const to_normalize = [ 0,1,2,3,4,5,6 ]
+const result_norm = matrix.normalize_array(to_normalize, 0, 16)
+tap.equals(result_norm[0], 0,  "first element is correct")
+tap.equals(result_norm[1], 2,  "second element is correct")
+tap.equals(result_norm[5], 13, "sixth element is correct")
+tap.equals(result_norm[6], 16, "last element is correct")
