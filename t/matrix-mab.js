@@ -46,6 +46,7 @@ const cropped = matrix.resize(
     () => "",
     true // allow cropping
 )
+
 tap.equals(cropped.length, 10, "cropped height is right")
 tap.equals(cropped[0].length, 10, "cropped width is right")
 

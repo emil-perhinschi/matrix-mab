@@ -20,16 +20,6 @@ npm run test (also runs build)
 
 ## FUNCTIONS
 
-### add_matrices
-in
-
-  * first: 2d array
-  * second: 2d array same size as first
-
-out
-
-  * 2d array, each element sum of the elements with the same indices in the arguments
-
 ### pgm_to_matrix
 in
 
@@ -123,8 +113,9 @@ out
   * new 2d array
 
 ### resize
-creates a new 2d array with adds extra values (as returned by the fill()
+creates a new 2d array with extra values (as returned by the fill()
 callback ) and the original data starting with the specified offset;
+
 allow_cropping permits allows the new size to be smaller than the original or
 the offset values to be negative so only part of the original 2d array values
 are preserved in the result
@@ -136,8 +127,8 @@ a value to be set to each element not existing already in the original
 in
 
   * original : 2d array
-  * offset : object, such as { x: someValue, y: someOtherValue}
-  * new_size : object, such ash { x: 10, y:10 }
+  * offset : object, { x: someValue, y: someOtherValue}
+  * new_size : object,  { x: 10, y:10 }
   * fill : fill(x, y)
   * allow_cropping: boolean
 
@@ -159,6 +150,53 @@ in
 out
 
   * new 2d array
+
+### add_matrices
+
+in
+
+* first: 2d array
+* second: 2d array same size as first
+
+out
+
+* 2d array, each element sum of the elements with the same indices in the arguments
+
+### moving_average
+not weighted, only doing plain average of the cells within specified distance
+
+in
+
+  * 2d array
+  * distance
+
+out
+  * new 2d array
+
+### sum_elements
+adds all elements in the array
+
+in
+
+  * 2d array
+
+out
+
+  * number
+
+### replace_elements
+replace elements in the matrix based on a filter function which returns a boolean
+
+in
+
+  * matrix,
+  * filter = (i) => i < 0,
+  * transform = (i) => Math.abs(i)
+
+out
+
+  * new 2d array with the matching elements replaced with the result of the transform function
+
 
 ### squeeze TODO
 downscale 2d arrays
