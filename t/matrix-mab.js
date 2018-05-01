@@ -21,7 +21,7 @@ const part = matrix.slice2d(normalized, 17, 33, 17, 33)
 tap.equals(part.length, 16, "slice is 20 high")
 tap.equals(part[0].length, 16, "slice is 20 wide")
 tap.equals(part[0][0], 16, "0,0 is 16")
-tap.equals(part[1][1], 0, "1,1 is 0")
+tap.equals(part[1][1], 16, "1,1 is 0")
 tap.equals(part[15][15], 16, "15,15 is 16")
 tap.equals(part[14][14], 0, "14,14 is 0")
 
