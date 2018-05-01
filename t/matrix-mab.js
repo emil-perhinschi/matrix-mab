@@ -65,3 +65,12 @@ tap.equals(result_norm[0], 0,  "first element is correct")
 tap.equals(result_norm[1], 2,  "second element is correct")
 tap.equals(result_norm[5], 13, "sixth element is correct")
 tap.equals(result_norm[6], 16, "last element is correct")
+
+const first = matrix.random_matrix(10,10)
+const second = matrix.random_matrix(10,10)
+const sum = matrix.add_matrices(first, second)
+
+tap.equals(( first[0][0] + second[0][0]), sum[0][0])
+tap.equals(( first[1][2] + second[1][2]), sum[1][2])
+tap.equals(( first[3][3] + second[3][3]), sum[3][3])
+tap.equals(( first[5][9] + second[5][9]), sum[5][9])

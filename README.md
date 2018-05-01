@@ -20,6 +20,16 @@ npm run test (also runs build)
 
 ## FUNCTIONS
 
+### add_matrices
+in
+
+  * first: 2d array
+  * second: 2d array same size as first
+
+out
+
+  * 2d array, each element sum of the elements with the same indices in the arguments
+
 ### pgm_to_matrix
 in
 
