@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode development --config webpack.js --display-error-details",
     "lint": "./node_modules/.bin/eslint  lib/*.js t/*.js ",
-    "test": "npm run build && NODE_PATH=./dist tap t/*.js"
+    "test": "npm run build && NODE_PATH=./dist tap t/*.js",
+    "install": "npm run build"
   },
   "author": "Emil Nicolaie Perhinschi",
   "license": "ISC",
