@@ -50,6 +50,7 @@ const window = matrix.resize(
     () => 0,
     true
 )
+
 tap.equals(window[0][0], 0)
 tap.equals(window[1][1], 1)
 tap.equals(window[2][2], 1)
