@@ -197,6 +197,27 @@ out
 
   * new 2d array with the matching elements replaced with the result of the transform function
 
+### are_equal
+will throw Error if any of the parameters is not a 2d array
+
+in
+
+  * first
+  * second
+
+out
+
+  * boolean
+
+### is_2d_array
+in
+
+  * 2d array
+
+out
+
+  * boolean
+
 
 ### squeeze TODO
 downscale 2d arrays
